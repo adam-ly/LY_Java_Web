@@ -1,0 +1,23 @@
+#驱动
+driverClassName=com.mysql.cj.jdbc.Driver
+# 初始化连接数量
+initialSize=5
+# 最大连接数
+maxActive=10
+# 最大等待时间
+maxWait=3000
+#数据库连接信息
+url=jdbc:mysql://127.0.0.1:3306/testdatabase?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=GMT
+username=root
+password=3488755
+
+#如果无spring框架，就不需要下面的参数，否则会报 （  testWhileIdle is true, validationQuery not set  ）
+filters=stat
+timeBetweenEvictionRunsMillis=60000
+minEvictableIdleTimeMillis=300000
+validationQuery=SELECT 1
+testWhileIdle=true
+testOnBorrow=false
+testOnReturn=false
+poolPreparedStatements=false
+maxPoolPreparedStatementPerConnectionSize=200

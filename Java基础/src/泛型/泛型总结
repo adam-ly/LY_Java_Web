@@ -1,0 +1,8 @@
+
+1、泛型可以自定义，写法一般为大写的字母或单词代替。
+   Map<KEY,VALUE>;
+
+2、泛型可以指定类和实现某个接口的类
+   Class CLS< T extend Integer, T extend Interface >
+
+3、通配符 ?, 可以适用于任何类型

@@ -1,0 +1,54 @@
+
+1、JDBC 是一套《接口》！ 无论是MySQL，Oracle、还是MySQL Server，这些数据库的具体实现类都要用到JDBC接口。
+所以对于开发者来说，代码并依赖于任何数据库，只需调用接口方法便能使用相关的功能。
+
+2、会使用到的包
+  java.sql : 所有与JDBC访问数据库相关的接口和类。
+  javax.sql : 数据库扩展包，提供数据库额外的功能。如：链接池
+  数据库的驱动 : 有各个数据库厂商提供，需自行下载，是对JDBC接口实现的类
+
+3、JDBC核心类：
+
+  DriverManager（类） : 管理和注册数据库驱动。(告诉程序使用哪一种数据库的jar，Mysql5之后的驱动jar包可以省略注册驱动)
+  Connection（接口） : 一个连接对象，可以创建Statement和PreparedStatement对象，以及管理事务
+  Statement(接口) : 一个SQl语句对象，负责将SQL语句发送给数据库。
+                   注意如果是excute()方法，如果是查询成功也会返回false，要有结果集才能为true。
+  PreparedStatement(接口) : 是statement的子接口。
+  ResultSet（接口）：用于封装数据库查询的结果集，返回给客户端Java程序。
+
+4、核心类详解
+
+  1、DriverManager中有个静态方法是用来注册驱动的
+     public static void registerDriver(java.sql.Driver driver)
+     throws SQLException {
+         registerDriver(driver, null);
+     }
+
+  2、connection对象
+     1、URL指定连接路径
+        * 语法： jdbc:mysql://ip:port/数据库名称 （ jdbc:mysql://192.0.0.1:3306/db3 ）
+        * 细节： 如果连接的是本机mysql服务器，并且mysql服务默认端口是3306，则url可以简写为：jdbc:mysql:///数据库名称
+        * user: 用户名
+        * password: 密码
+     2、获取执行sql 的对象
+     	* Statement createStatement()
+        * PreparedStatement prepareStatement(String sql)
+     3、管理事务
+        * 开启事务：setAutoCommit(boolean autoCommit) ：调用该方法设置参数为false，即不自动提交，开启事务
+        * 提交事务：commit()
+        * 回滚事务：rollback()
+
+   3、ResultSet
+      游标：游标初始位置在0，next()就是第一行，所以要先判断是否有数据，再决定是否获取数据
+      获取数据：
+          根据列的行数获取数据: res.getInt(1)
+          根据列的名称获取数据: res.getString("columnName")
+注意点：
+一、SQL注入问题：
+   1、例如 SELECT * FROM Users WHERE UserId = 105 OR 1=1; 中，1=1 结果为true，所以所有结果都可以被查询出来
+   2、或者 SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""="" 由于 ""=""结果为true，
+     或"1"="2"结果都为true，那么就可以被黑客利用进行非法登录。
+   SQL注入问题的解决方案：
+   1、使用PrepareStatement（常用）
+   2、其他的不常用，暂不补充
+

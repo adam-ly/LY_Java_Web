@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-03-08T07:56:05.822172100Z</date>
+  <millis>1615190165822</millis>
+  <nanos>172100</nanos>
+  <sequence>0</sequence>
+  <logger>local</logger>
+  <level>SEVERE</level>
+  <class>日志.LoggerDemo</class>
+  <method>logToLocal</method>
+  <thread>1</thread>
+  <message>severe日志</message>
+</record>
+<record>
+  <date>2021-03-08T07:56:05.828172600Z</date>
+  <millis>1615190165828</millis>
+  <nanos>172600</nanos>
+  <sequence>1</sequence>
+  <logger>local</logger>
+  <level>WARNING</level>
+  <class>日志.LoggerDemo</class>
+  <method>logToLocal</method>
+  <thread>1</thread>
+  <message>warninig日志</message>
+</record>
+<record>
+  <date>2021-03-08T07:56:05.828172600Z</date>
+  <millis>1615190165828</millis>
+  <nanos>172600</nanos>
+  <sequence>2</sequence>
+  <logger>local</logger>
+  <level>INFO</level>
+  <class>日志.LoggerDemo</class>
+  <method>logToLocal</method>
+  <thread>1</thread>
+  <message>info日志</message>
+</record>
+</log>

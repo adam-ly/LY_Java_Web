@@ -1,0 +1,39 @@
+
+一、static方法：
+   1、static方法就是没有this的方法。
+   2、static方法内部不能调用非static方法，反之可以。
+   3、static方法内部不能访问非static成员变量
+
+二、static变量：
+   1、static变量被<所有对象>共享，内存中只有一个副本，当且仅当类初次加载时被初始化。
+     非static变量则在类每次创建对象时被初始化，存在多个副本。
+   2、static变量初始化顺序 与 定义的顺序 一致
+
+三、static代码块：
+   1、static代码块在类加载时会按照定义的顺序各执行一次。(详情见emo02)
+      执行顺序： 父类静D态代码块 -> 子类静态代码块 -> 父类初始化方法 —> 子类初始化方法
+
+   2、使用static代码块可以优化系统性能，很多时候会将一些只需要执行一次的初始化操作放进其中
+
+   例如：
+    boolean isBornBoomer() {
+    //每次都会创建 两个 date 对象
+       Date startDate = Date.valueOf("1946");
+       Date endDate = Date.valueOf("1964");
+       return birthDate.compareTo(startDate)>=0 && birthDate.compareTo(endDate) < 0;
+    }
+    //改为
+    static{ // 这里两个date只会被创建一次
+       startDate = Date.valueOf("1946");
+       endDate = Date.valueOf("1964");
+    }
+
+四、static注意点：
+
+1、与C/C++中的static不同，java中的static不会影响变量或方法的访问权限，
+   比如类中的private staic成员对其他类同样《不》可见
+
+2、虽然在静态方法中没有this，但是可以通过this访问静态成员变量和方法，因为静态成员和方法被所有对象共享，
+   this也是对象，当然可以使用，详情见Demo01.
+
+3、与C/C++中的static不同，java中的static不能用作局部变量
