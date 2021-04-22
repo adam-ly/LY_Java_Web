@@ -1,0 +1,48 @@
+Tomcat环境配置和注意点：
+1、Tomcat是java编写的服务器软件，其中依赖到本地Java的JDK,所以需要先配置Java的环境变量 -> "JAVA_HOME"
+2、配置Tomcat环境变量
+
+Tomcat启动:
+1、进入bin目录点击startup
+2、终端输入startup（前提：配置好了tomcat环境变量）
+
+端口占用问题：
+1、杀死占用端口的程序
+   * 终端运行 netstat -ano 指令，找到对应端口的进程，拿到PID之后到任务管理器中的进程模块找到对应的程序，然后杀死
+2、修改tomcat本身的端口
+   * 修改conf\server.xml中的端口号（重启生效）
+   * 如果要启动两套tomcat，那么可以通过修改端口号的方式去启动多个tomcat
+
+
+Tomcat部署：
+一、将项目放到webapps目录下即可（例子：hello文件夹中放入一个hello.html文件）
+   * /hello: 项目的访问路径 ---> 虚拟目录
+   * 简化部署：将项目打成一个war包，将war包放入到webapps下面，war包会自动解压并《覆盖》同名文件夹。
+     *制作war包。进入目录，通过命令 jar -cvf hellotomcat.war * 即可生成war包。（注意，手动修改zip为war的可能不会自动解压）
+     *删除war包同名文件夹也会被删除
+   缺点：只能放在tomcat的webapps文件夹中，对开发者来说不方便。
+
+二、在配置文件server.xml中，找到Host标签，在标签体中添加 Context标签
+  * <Context docBase="D:/hello" path="/hehe"> docBase为真实路径，hehe为虚拟路径，可以通过虚拟路径 hehe\hello.html
+
+   缺点:
+   * 不安全，如果项目很多全部放在server.xml文件里面，那么有概率产生误操作。
+   * 修改配置之后必须重启服务器才能生效
+
+三、在conf\Catalina\localhost创意任意名称的xml文件 这种方案是目前最常用的
+    * 在创建的xml文件中配置项目位置  <Context docBase="D:/hello"> 不需要填虚拟目录
+    * 因为xml文件的名称就是虚拟目录的路径名称。
+
+    优点：
+    * 热部署，如果某个项目xml不想要，那么对它进行修改（比如改后缀），不需要重启服务器也能看到效果
+
+
+java动态项目的目录结构：
+	-- 项目的根目录
+		-- WEB-INF目录：
+		    -- web.xml：web项目的核心配置文件
+			-- classes目录：放置字节码文件的目录
+			-- lib目录：放置依赖的jar包
+
+
+

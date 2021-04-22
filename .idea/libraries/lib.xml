@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Java基础/lib/spring-beans-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java基础/lib/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java基础/lib/hamcrest-core-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java基础/lib/spring-core-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java基础/lib/spring-jdbc-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java基础/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java基础/lib/spring-tx-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java基础/lib/mysql-connector-java-8.0.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java基础/lib/druid-1.0.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
