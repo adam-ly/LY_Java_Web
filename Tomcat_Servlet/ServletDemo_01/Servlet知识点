@@ -1,0 +1,57 @@
+
+一、Servlet：Servlet applet （运行在服务端的小程序） 目前都用servlet3.0 !!!
+* Servlet是一组接口
+* 需要自己定义实现类
+
+二、执行原理：
+1、当服务器接收到请求后，解析url路径，获取访问的servlet的资源路径
+2、查找web.xml文件，是否有对应的<url-pattern>内容 ( Servlet3.0不需要web.xml文件了 )
+   * <servlet-mapping> 的 parttern 定义了虚拟路径，前面记得加斜杠
+   * <servlet-mapping>中的servlet-name 对应<servlet> 中的servlet-name
+   * 通过servlet-name 找到对应的 servlet-class
+3、如有，则找到对应的<servlet-class>类
+4、tomcat会利用发射机制，将类的字节码文件加载到内存，并创建对象
+5、调用其接口方法
+
+三、Servlet生命周期：
+1、被创建，执行init，只调用一次
+    Servlet创建时机：
+      * 默认第一次被访问时创建
+      * 可以配置执行Servlet的创建时机
+         * <servlet>标签下配置
+           1.第一次被访问时，设置<load-on-startup>的值为负数
+           2.在服务器启动时，设置<load-on-startup>的值为0或正数
+
+注意：Servlet的init方法，只执行一次，说明一个Servlet对象在内存中只有一份，它是《单例》
+* 多个用户访问时，可能存在线程安全问题
+* 解决： 尽量不要再servlet中定义成员变量，如需定义成员变量，则尽可能不修改值
+
+2、提供服务，执行service方法，可以被多次执行。
+  * 每次访问servlet时，都会执行service方法
+
+3、销毁：destroy方法只执行一次4
+  * servlet被销毁时执行，服务器关闭时，servlet被销毁
+  * 服务器必须《正常》关闭，servlet才会正常销毁
+  * destroy方法在servlet销毁前执行，用于释放资源
+
+四、Servlet3.0
+  优点：通过注解配置。不需要web.xml
+       * 设置虚拟路径,如果只有一个值可以省略urlPatterns
+         * @WebServlet("/Servlet_3_Demo_01")
+
+       * 多层路径
+         * @WebServlet("/Servlet_3_Demo_01/demo_01")
+
+       * 设置任意路径，*号表示任意访问路径，随便写一个路径名(可以为空)都能访问，但是它的优先级最低，如果刚好输入的随机路径存在，会先访问对应的servlet
+         * @WebServlet("/Servlet_3_Demo_01/*")
+
+       * 设置路径后缀
+          @WebServlet("/adb.do")
+  步骤:
+  1、创建javaee项目，选择Servlet的版本3.0以上，可以不创建web.xml
+  2、定义具体类并实现接口
+  3、在类上使用@WebServlet注解，进行配置
+     * String name() default "";//相当于<Servlet-name 00
+     * String[] value() default {};//代表urlPatterns()属性配置
+     * String[] urlPatterns() default {};//相当于<url-pattern>
+     * int loadOnStartup() default -1;//相当于<load-on-startup>

@@ -45,4 +45,10 @@ java动态项目的目录结构：
 			-- lib目录：放置依赖的jar包
 
 
-
+IDEA部署javaee+tomcat项目：
+1、创建一个module
+2、module目录右键选”add framework support“,选择 add “web application”.
+   或者创建的时候直接选择javaee项目（这个需要自己创建index.jsp）
+3、"Run"->"EditConfiguration",添加"Tomcat Server(local)"
+4、点击创建的server，选择deployment，点击+号添加artifacts，选择对应的module的war输出。
+5、在deployment下方填写虚拟路径，如果不需要保留’/‘即可。
