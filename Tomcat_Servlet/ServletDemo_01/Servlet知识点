@@ -55,3 +55,9 @@
      * String[] value() default {};//代表urlPatterns()属性配置
      * String[] urlPatterns() default {};//相当于<url-pattern>
      * int loadOnStartup() default -1;//相当于<load-on-startup>
+
+五、HttpServlet （常用）
+   * HttpServlet(抽象类) <--继承于-- GenericServlet（抽象类） <---继承于--- Servlet（接口）
+     * GenericServlet: 对Servlet中的方法都做了空处理，只将 Service 作为抽象，
+       定义Servlet类时只需继承GenericServlet并实现Service方法即可
+     * HttpServlet:
