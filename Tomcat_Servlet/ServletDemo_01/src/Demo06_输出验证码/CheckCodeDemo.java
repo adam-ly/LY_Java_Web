@@ -1,4 +1,4 @@
-package 输出验证码_06;
+package Demo06_输出验证码;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;

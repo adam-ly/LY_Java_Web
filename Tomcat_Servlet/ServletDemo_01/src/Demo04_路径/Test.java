@@ -1,4 +1,4 @@
-package Lesson_04_路径;
+package Demo04_路径;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

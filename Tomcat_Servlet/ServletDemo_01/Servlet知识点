@@ -10,8 +10,8 @@
    * <servlet-mapping>中的servlet-name 对应<servlet> 中的servlet-name
    * 通过servlet-name 找到对应的 servlet-class
 3、如有，则找到对应的<servlet-class>类
-4、tomcat会利用发射机制，将类的字节码文件加载到内存，并创建对象
-5、调用其接口方法
+4、tomcat会利用反射机制，将类的字节码文件加载到内存，并创建(servlet-class)对象
+5、然后创建request和response两个对象，调用service方法(其它接口方法)
 
 三、Servlet生命周期：
 1、被创建，执行init，只调用一次

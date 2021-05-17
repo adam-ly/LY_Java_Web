@@ -1,4 +1,4 @@
-package 转发和重定向_03;
+package Demo03_转发和重定向;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,4 +1,4 @@
-package 设置Serverlet虚拟路径的几种方法_01;
+package Demo01_设置Serverlet虚拟路径的几种方法;
 
 import javax.servlet.*;
 import java.io.IOException;

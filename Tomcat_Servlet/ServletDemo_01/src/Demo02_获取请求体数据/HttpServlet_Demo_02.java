@@ -1,4 +1,4 @@
-package Lesson_02_获取请求体数据;
+package Demo02_获取请求体数据;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

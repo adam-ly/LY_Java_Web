@@ -1,0 +1,24 @@
+
+
+一、ServletContext概念：代表整个应用，可以和程序的容器(服务器)来通信，它是一个单例对象、
+二、获取ServletContext:
+  .req.getServletContext()
+  .this.getServletContext()
+
+三、作用：
+
+  1.获取MIME类型：在互联网通信过程中定义的一种文件数据类型。
+     *格式：大类型/小类型，text/html、image/jpeg
+     *获取： String getMimeType(文件名),
+            这些类型的映射全部都保存在 tomcat服务器的conf文件夹中的web.xml文件中
+
+  2.它是一个域对象，可以通过它共享数据.
+
+     .setAttribute
+     .getAttribute
+     .removeAttribute
+
+     * servletContext对象范围 ：
+       所有用户的所有请求的数据。即setAttribute之后，再此请求访问其他的servlet也可以获取到。
+
+  3.获取文件的真实（服务器）路径

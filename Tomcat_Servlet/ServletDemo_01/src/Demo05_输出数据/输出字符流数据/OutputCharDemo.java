@@ -1,4 +1,4 @@
-package 输出数据_05.输出字符流数据;
+package Demo05_输出数据.输出字符流数据;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

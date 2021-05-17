@@ -1,10 +1,29 @@
-@javax.servlet.annotation.WebServlet("/CookieDemo03")
-public class CookieDemo03 extends javax.servlet.http.HttpServlet {
-    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
+package Demo09_CookieAndSession.Cookie;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet("/CookieDemo03")
+public class CookieDemo03 extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        //可以发送多个cookie，默认情况下，浏览器关闭后cookie会被清空掉
+
+        //1、创建Cookie
+        Cookie cookie1 = new Cookie("msg","hello");
+        Cookie cookie2 = new Cookie("name","张三");
+
+        //2、发送多个cookie
+        response.addCookie(cookie1);
+        response.addCookie(cookie2);
     }
 
-    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
-         this.doPost(req,resp);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.doPost(request, response);
     }
 }

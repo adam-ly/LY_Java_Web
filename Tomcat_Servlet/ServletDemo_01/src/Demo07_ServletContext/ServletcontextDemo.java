@@ -1,4 +1,4 @@
-package Lesson_07_ServletContext;
+package Demo07_ServletContext;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

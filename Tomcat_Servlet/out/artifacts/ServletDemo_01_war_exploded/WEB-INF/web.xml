@@ -6,12 +6,12 @@
 
     <servlet>
         <servlet-name>demo</servlet-name>
-        <servlet-class>ServletDemo</servlet-class>
+        <servlet-class>Demo01_设置Serverlet虚拟路径的几种方法.ServletDemo</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>demo</servlet-name>
-        <url-pattern>/serletdemo_01</url-pattern>//虚拟路径
+        <url-pattern>/servletdemo_01</url-pattern>//虚拟路径
     </servlet-mapping>
 
 </web-app>

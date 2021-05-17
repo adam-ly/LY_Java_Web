@@ -1,3 +1,3 @@
 
-1、HttpServlet_Demo，通过html提交表单的方式，它的默认content-type 为 application/x-www-form-urlencoded，
+1、Demo02_获取请求体数据.HttpServlet_Demo，通过html提交表单的方式，它的默认content-type 为 application/x-www-form-urlencoded，
   导致req.getReader()为空

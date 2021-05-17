@@ -1,4 +1,4 @@
-package 输出数据_05.输出字节流数据;
+package Demo05_输出数据.输出字节流数据;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet("/OutPutDemo")
 public class OutPutDemo extends HttpServlet {
