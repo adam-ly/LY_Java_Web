@@ -35,7 +35,7 @@ public class CheckCodeDemo extends HttpServlet {
         String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789";
         //生成随机角标
         Random ran = new Random();
-        for (int i = 0; i < 4; i++){
+        for (int i = 1; i <= 4; i++){
             int index = ran.nextInt(str.length());
             char ch = str.charAt(index);
             // +"" 是将char转为string

@@ -1,0 +1,37 @@
+
+一、jsp: Java Server Pages （java服务端页面）
+*可以理解为： 一个特殊的页面，其中即可以指定定义html标签，又可以定义java代码
+*用于简化书写
+
+二、原理
+   JSP本质上就是一个Servlet
+   验证方法：启动Servlet的tomcat后，在打印日志第一行那里可以找到 Catalina_BASE 路径，路径中有一个work目录，
+           包括本地tomcat也有一个work目录，用来存放运行时产生的资源文件。可以看到源码中jsp文件继承自HttpJspBase，
+           是Apache提供的一个类，并且继承自HttpServlet，HttpJspBase通过输出标签来生成html页面。
+
+三、JSP脚本:JSP定义java代码的方式
+   1、<% 代码 %> ：
+      通过编译后的代码可以看到，该指令的代码会写在Service方法中.任何能写在Service中的代码都可以写在这个脚本里面
+
+   2、<%! 代码 %>
+      定义的java代码，在jsp转换后java类的成员位置，即可以定义成员变量和成员方法。
+      但不建议在这里定义变量，不然多线程情况下不好处理
+
+   3、<%= 代码 %>
+      定义的代码，会输出到页面上，比如输出成员变量的值之类的。输出语句中可以定义什么，改脚本就可以定义什么。
+
+四、JSP内置对象
+   .在jsp页面中不需要获取和创建。可以直接使用的对象。
+   .JSP有9个内置对象，常用的有3个：
+      * request
+      * response
+      * out：字符输出流对象，可以将数据输出到页面上。和response.getWriter()类似
+        区别：* tomcat服务器真正给客户端做出相应之前，会找response缓冲区数据，再找out缓冲区数据
+             * response.getWriter()数据输出永远在out.write之前、
+
+五、jsp向浏览器页面输出的方式有以下四种，前三种底层都是通过out输出流，所以打印顺序是4、1、2、3.
+   1.<%="aaaa"%>
+   2.bbbbbbbbbbbbb
+   3.<%out.write("ccccc");%>
+   4.<%response.getWriter.write("dddd");%>
+

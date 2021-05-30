@@ -12,7 +12,7 @@ import java.io.IOException;
 public class CookieDemo03 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //可以发送多个cookie，默认情况下，浏览器关闭后cookie会被清空掉
+        //通过能够获取cookie数组便知道,可以发送多个cookie，默认情况下，浏览器关闭后cookie会被清空掉
 
         //1、创建Cookie
         Cookie cookie1 = new Cookie("msg","hello");

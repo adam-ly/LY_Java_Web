@@ -15,6 +15,8 @@ import java.util.Date;
 @WebServlet("/CookieDemo05")
 public class CookieDemo05 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        //由于是输出给浏览器，所以要设置好相应的解析编码方式
         response.setContentType("text/html;charset=utf-8");
 
         /**案例：记住上一次的访问时间

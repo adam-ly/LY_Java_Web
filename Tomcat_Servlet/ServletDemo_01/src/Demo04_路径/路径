@@ -1,6 +1,9 @@
 
+Demo对应的html文件为locationTest.html
 1、相对路径：./index.jsp表示当前文件夹下的index.html文件 ， ../表示退到上一个文件夹
 2、绝对路径：http://localhost:8080/虚拟路径(无可省略)/locationTest.html
 
 需要注意的是，需要找到相对路径资源和绝对路径资源的对应位置关系
-1、web文件夹下的文件，跟Servlet类文件的路径是同级别的，
+1、web文件夹下的文件，跟Servlet类文件的路径是同级别的
+   举例：WEB/Location.html 访问servlet的路径为 "./Servlet"
+        WEB/Test/Location.html 访问servlet的路径为 "../Servlet"

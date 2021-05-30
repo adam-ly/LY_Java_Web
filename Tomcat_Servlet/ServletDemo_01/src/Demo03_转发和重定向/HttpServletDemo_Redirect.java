@@ -20,7 +20,7 @@ public class HttpServletDemo_Redirect extends HttpServlet {
 
         //使用动态虚拟目录，防止本地修改目录后导致客户端访问出错
         String context = req.getContextPath();
-        System.out.println(context);
+        System.out.println("虚拟目录： " + context);
 
         /** 方法 2 */
         //2、使用重定向方法（重定向是两次请求），因为重定向算是新的请求，也是有由客户端发起，所以需要填写虚拟路径（如果有）
