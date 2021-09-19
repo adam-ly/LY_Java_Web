@@ -15,8 +15,7 @@ public class JDBCDemo {
         String url = "jdbc:mysql://127.0.0.1:3306/testdatabase?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=GMT";
         String user = "root";
         String psw = "3488755";
-        Connection conn = DriverManager.getConnection(url,
-                user,psw);
+        Connection conn = DriverManager.getConnection(url,user,psw);
 
         //3.定义sql语句
         String sql = "INSERT INTO student VALUES(13,\"Sarah\",32,23.5,NULL,NULL);";

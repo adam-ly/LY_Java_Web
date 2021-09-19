@@ -1,3 +1,11 @@
 
 JDBCTemplate是由Spring框架提供的一个工具，用来简化JDBC的开发,
-用户不需要自己去释放资源，只需要专注于sql语句的编写，数据库连接池的管理都由JdbcTemplate自动完成
+用户不需要自己去释放资源，只需要专注于sql语句的编写，
+数据库连接池的管理都由JdbcTemplate自动完成
+
+相关jar包：
+spring-tx-5.0.0.RELEASE
+spring-jdbc-5.0.0.RELEASE
+spring-core-5.0.0.RELEASE
+spring-beans-5.0.0.RELEASE
+commons-logging-1.2

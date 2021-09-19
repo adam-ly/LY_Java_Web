@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9caa9902-0d4a-475e-9050-84ecdd012aaa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/.idea/artifacts/Javaee_deploy_ear_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/.idea/artifacts/Javaee_deploy_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/JavaEE_Deploy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/Java_Deploy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/Javaee_deploy/META-INF/application.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/Javaee_deploy/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/Tomcat_Servlet.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomcat_Serverlet/Tomcat知识点" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Jar包/Java_Jar包.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java基础/JDBC基础/JDBC基础.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java基础/Java基础.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/src/Demo11_综合案例_用户信息/Model/PageBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/src/Demo11_综合案例_用户信息/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/src/Demo11_综合案例_用户信息/Service/UserServiceInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/src/Demo11_综合案例_用户信息/Servlet/CheckCodeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/src/Demo11_综合案例_用户信息/Servlet/WebLoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/web/WEB-INF/lib/commons-beanutils-1.8.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/web/综合案例/js/jquery-2.1.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/web/综合案例/page/Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/web/综合案例/page/Login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/ServletDemo_01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/ServletDemo_01.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/src/Demo11_综合案例_用户信息/Dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/src/Demo11_综合案例_用户信息/Dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/src/Demo11_综合案例_用户信息/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/src/Demo11_综合案例_用户信息/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/web/综合案例/page/Table.html" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat_Servlet/ServletDemo_01/web/综合案例/page/Table.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +52,11 @@
       <option name="presentableId" value="Default" />
       <updated>1619013973918</updated>
       <workItem from="1619013975756" duration="20000" />
+      <workItem from="1622822363903" duration="114000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

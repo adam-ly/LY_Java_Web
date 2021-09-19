@@ -1,6 +1,8 @@
 package Demo11_综合案例_用户信息.Dao;
 
-import Demo10_JSP.Servlet.LoginDemo.User;
+import Demo11_综合案例_用户信息.Model.User;
+import Demo11_综合案例_用户信息.Model.PageBean;
+
 import java.util.Map;
 import java.util.List;
 
@@ -23,6 +25,6 @@ public interface UserDao {
     int findTotalCount(Map<String,String[]> condition);
 
     //分页记录
-    List<User> findByPage(int start,int rows,Map<String,String[]> condition);
+    PageBean<User> findByPage(int start, int rows, Map<String,String[]> condition);
 
 }

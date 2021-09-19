@@ -12,7 +12,7 @@
    1、Druid
    2、。。。。
 
-Druid各方面的性能在众多第三方连接池中表现优异，所以这里只讨论Druid。（jar：druid-1.0.9.jar）
+Druid各方面的性能在众多第三方连接池中表现优异,所以这里只讨论Druid。（jar：druid-1.0.9.jar）
    1、准备配置文件，properties格式。
    2、加载配置文件
    3、获取数据库连接池对象，通过工厂来获取 DruidDataSourceFactory
