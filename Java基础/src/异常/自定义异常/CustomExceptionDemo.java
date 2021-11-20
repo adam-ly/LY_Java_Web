@@ -1,5 +1,9 @@
 package 异常.自定义异常;
 
+import com.sun.security.ntlm.Server;
+
+import java.rmi.ServerException;
+
 public class CustomExceptionDemo {
 
     public static void main(String[] args) {
