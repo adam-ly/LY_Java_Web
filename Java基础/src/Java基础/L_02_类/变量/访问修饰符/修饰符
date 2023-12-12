@@ -1,0 +1,18 @@
+
+
+//  4种访问修饰符： 同一个类 同一个包 不同包子类 不同包非子类
+    //public       1       1        1         1
+    //protected    1       1        1
+    //default      1       1
+    //private      1
+
+对外公
+
+//   其他修饰符：
+    //abstract   抽象的
+    //static     静态的
+    //synchronized 同步的
+    //native     本地的
+    //transient  暂时的
+    //volatile   易失的
+    //final      不可变的

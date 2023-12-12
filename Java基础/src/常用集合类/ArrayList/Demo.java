@@ -14,10 +14,10 @@ public class Demo {
         ArrayList<Integer> list = new ArrayList<>();
         ArrayList<Integer> list1 = new ArrayList<>(10);
         ArrayList<Integer> list2 = new ArrayList<>(list);
+
         /**
          * 添加
          * */
-
         ArrayList<String> append_list = new ArrayList<>();
         append_list.add("11");
         append_list.add("22");

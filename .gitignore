@@ -1,0 +1,16 @@
+# 忽略输出目录
+out/
+target/
+bin/
+build/
+
+# 忽略构建产物和临时文件
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.tar.bz2
+*.log
+
